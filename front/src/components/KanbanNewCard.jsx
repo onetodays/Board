@@ -1,6 +1,4 @@
 
-
-import { comment } from 'postcss'
 import React, { useState, useEffect, useRef } from 'react'
 
 export default function KanbanNewCard({ onSubmit }) {

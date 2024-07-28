@@ -12,10 +12,10 @@ from controller.UserController import app as User
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from pathlib import Path
-
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
-
+# app.mount("/static", StaticFiles(directory="../front/dist"), name="static")
 app.include_router(Taskboard, prefix="/taskboard",tags=["taskboard"])
 app.include_router(User, prefix="/user",tags=["user"])
 
